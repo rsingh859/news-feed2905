@@ -1,0 +1,22 @@
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 150px 200px 40px;
+  grid-template-areas: "image" "text" "footer";
+  border: solid;
+  border-radius: 15px;
+}
+
+.background-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-body {
+  grid-area: text;
+}
+
+.card-footer {
+  grid-area: footer;
+}

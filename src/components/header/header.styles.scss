@@ -1,0 +1,18 @@
+.options-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .option {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: transform 0.1s;
+    }
+  }
+}
