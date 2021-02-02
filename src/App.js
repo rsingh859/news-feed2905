@@ -8,8 +8,8 @@ import NewsList from './components/news-list/news-list.component';
 function App() {
   return (
     <div className='app'>
-      <Header />
       <NewsContextProvider>
+        <Header />
         <NewsList />
       </NewsContextProvider>
     </div>

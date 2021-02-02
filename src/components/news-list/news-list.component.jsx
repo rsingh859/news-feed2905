@@ -11,9 +11,15 @@ const NewsList = (props) => {
     console.log(news);
     return(
         <div className='card-list'>
-            {news ? news.articles.map(({ url , ...otherProps }) => (
+            {news ? 
+                news.articles.map(({ url , ...otherProps }) => (
                 <NewsCard key={url} {...otherProps} />
-            )) : (<Spinner />) }
+                )
+            )
+            : 
+            (
+                <Spinner />
+            )}
         </div>
     );
 }
