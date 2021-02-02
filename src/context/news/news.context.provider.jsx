@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from 'react';
 
 import axios from 'axios';
 
-export const NewsContext = createContext(null);
+export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
     const [news, setNews ] = useState(null);
@@ -14,7 +14,7 @@ export const NewsContextProvider = (props) => {
         )
         .then(res => setNews(res.data))
         .catch((err) => console.log(err));
-    },[news]);
+    },[]);
 
     return (
         <NewsContext.Provider value = {{ news }}>

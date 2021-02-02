@@ -8,9 +8,10 @@ import Spinner from '../spinner/spinner.component';
 
 const NewsList = (props) => {
     const { news } = useContext(NewsContext);
+    console.log(news);
     return(
         <div className='card-list'>
-            {news ? news.map(({ url , ...otherProps }) => (
+            {news ? news.articles.map(({ url , ...otherProps }) => (
                 <NewsCard key={url} {...otherProps} />
             )) : (<Spinner />) }
         </div>

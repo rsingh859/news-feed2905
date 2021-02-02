@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ImageContainer = styled.image`
+export const ImageContainer = styled.div`
     background-image: ${({ urlToImage }) => `url(${urlToImage})`};
     background-repeat: no-repeat;
     background-size: cover;
