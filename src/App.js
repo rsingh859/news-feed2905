@@ -3,14 +3,14 @@ import './App.css';
 import {NewsContextProvider} from './context/news/news.context.provider';
 
 import Header from './components/header/header.component';
-import NewsList from './components/news-list/news-list.component';
+
+import reducer, { initialState } from './context/news/reducer';
 
 function App() {
   return (
     <div className='app'>
-      <NewsContextProvider>
+      <NewsContextProvider initialState={initialState} reducer={reducer}>
         <Header />
-        <NewsList />
       </NewsContextProvider>
     </div>
   );
