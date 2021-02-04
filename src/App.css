@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto Slab", sans-serif;
-  padding: 20px 40px;
 }
 
 a {
@@ -14,5 +13,5 @@ a {
 
 .app {
   justify-content: center;
-  margin: 0 50px;
+  margin: 20px 40px;
 }

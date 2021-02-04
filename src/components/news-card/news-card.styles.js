@@ -4,6 +4,9 @@ export const ImageContainer = styled.div`
     background-image: ${({ urlToImage }) => `url(${urlToImage})`};
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(255, 147, 147);
+    background-position: center;
 `;

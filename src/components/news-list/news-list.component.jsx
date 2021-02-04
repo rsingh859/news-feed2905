@@ -23,8 +23,8 @@ const NewsList = ({url}) => {
     return(
         <div className='card-list'>
             {news ? 
-                news.articles.map(({ url , ...otherProps }) => (
-                <NewsCard key={url} {...otherProps} />
+                news.articles.map(({ description , ...otherProps }) => (
+                <NewsCard key={description} {...otherProps} />
                 )
             )
             : 
@@ -35,4 +35,4 @@ const NewsList = ({url}) => {
     );
 }
 
-export default NewsList;
+export default React.memo(NewsList);
