@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './news-list.styles.scss';
 
 import axios from 'axios';
+import dotenv from 'dotenv';
 
 import NewsCard from '../news-card/news-card.component';
 import Spinner from '../spinner/spinner.component';
 
+dotenv.config();
+
 const NewsList = ({url}) => {
 
     const [news, setNews ] = useState(null);
-    const API_KEY = '7e3bcec9fc6240c09259254552a7affb';
+    const API_KEY = process.env.API_KEY;
 
     useEffect(() => {
         axios.get(
