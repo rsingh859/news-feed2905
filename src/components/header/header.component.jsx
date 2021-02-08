@@ -14,15 +14,12 @@ const handleOnClick = ({link, dispatch}) => {
 
     options.forEach((option) => {
         option.addEventListener('click', () => {
-            console.log("Calling the remove active class")
-            removeActiveClasses();
+            removeActiveClasses()
             option.classList.add('active')
-            console.log(option.classList);
         })
     })
 
     const removeActiveClasses = () => {
-        console.log("In remove active classes")
         options.forEach(option => {
             option.classList.remove('active')
         })
