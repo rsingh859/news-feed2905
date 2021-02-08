@@ -9,18 +9,16 @@
   margin-right: auto;
 
   .option {
-    border: 1px solid rgba(95, 62, 62, 0.849);
     border-radius: 10px;
     cursor: pointer;
     padding: 6px;
     font-weight: bold;
-    color: rgb(66, 64, 64);
+    color: #cfbd52;
+    font-size: small;
+    box-shadow: 0 0 1px;
 
-    &:hover {
-      transform: scale(1.2);
-      transition: transform 0.1s;
-      color: black;
-      border: 1px solid black;
+    &:target {
+      border: 2px solid #cfbd52;
     }
 
     @media screen and (max-width: 590px) {

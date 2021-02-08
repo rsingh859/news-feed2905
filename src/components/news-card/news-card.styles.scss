@@ -1,21 +1,19 @@
 .card {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 150px 150px 40px;
+  grid-template-rows: 150px 140px 40px;
   grid-template-areas: "image" "text" "footer";
-  border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   .card-body {
     grid-area: text;
     padding-left: 8px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    background-color: rgb(212, 202, 202);
+    background-color: white;
 
     .card-title {
       font-weight: bold;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 8px;
       margin-bottom: 10px;
       display: -webkit-box;
@@ -23,22 +21,25 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: rgb(129, 129, 129);
     }
 
     .card-description {
-      font-size: 14px;
-      font-style: italic;
+      font-size: 12px;
+      font-weight: 550;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+      line-height: 17px;
+      color: rgb(170, 170, 170);
     }
   }
 
   .card-footer {
     grid-area: footer;
-    background-color: #f1abc7;
+    background-color: whitesmoke;
     transition: all 0.5s cubic-bezier(0.48, -0.28, 0.41, 1.4);
     overflow: hidden;
     border-bottom-left-radius: 10px;
@@ -54,20 +55,20 @@
 
       .author {
         font-weight: bold;
-        font-size: 15px;
+        font-size: 14px;
+        color: #cfbd52;
       }
 
       .date {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 3px;
       }
     }
 
     .more {
-      display: flex;
+      display: flex-end;
       padding-right: 5px;
-      font-style: italic;
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 }

@@ -4,6 +4,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  object-fit: contain;
+  position: relative;
 
   @media screen and (max-width: 900px) {
     margin: auto;

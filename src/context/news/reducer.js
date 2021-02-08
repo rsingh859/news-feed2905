@@ -1,5 +1,5 @@
 export const initialState = {
-    url:'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey='
+    url:'http://newsapi.org/v2/everything?domains=wsj.com&apiKey='
 }
 
 const reducer = (state = initialState, action) => {

@@ -7,6 +7,7 @@ export const ImageContainer = styled.div`
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: rgb(255, 147, 147);
+    background-color: whitesmoke;
     background-position: center;
+    object-fit: contain;
 `;

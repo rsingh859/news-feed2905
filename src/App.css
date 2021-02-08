@@ -13,5 +13,11 @@ a {
 
 .app {
   justify-content: center;
-  margin: 20px 40px;
+  margin: 20px 200px;
+}
+
+@media screen and (max-width: 900px) {
+  .app {
+    margin: 0 20px;
+  }
 }

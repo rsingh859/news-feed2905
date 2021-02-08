@@ -2,7 +2,7 @@ import React from 'react';
 import './news-card.styles.scss';
 import { ImageContainer } from './news-card.styles';
 
-const NewsCard = ({ urlToImage, author, title, content, url, publishedAt }) => {
+const NewsCard = ({ urlToImage, author, title, url, content, publishedAt }) => {
     return(
             <div className='card'>
                 <ImageContainer urlToImage={urlToImage} />
