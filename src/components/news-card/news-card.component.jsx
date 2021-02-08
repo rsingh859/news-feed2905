@@ -2,7 +2,7 @@ import React from 'react';
 import './news-card.styles.scss';
 import { ImageContainer } from './news-card.styles';
 
-const NewsCard = ({ urlToImage, author, title, url, content, publishedAt }) => {
+const NewsCard = ({ urlToImage, author, title, content, publishedAt }) => {
     return(
             <div className='card'>
                 <ImageContainer urlToImage={urlToImage} />
@@ -16,7 +16,7 @@ const NewsCard = ({ urlToImage, author, title, url, content, publishedAt }) => {
                         <span className='date'>{publishedAt}</span>
                     </div>
                     <div className='more'>
-                        <a href={url} className='more'>more..</a>
+                        <span className='more'>more..</span>
                     </div>
                 </div>
             </div>

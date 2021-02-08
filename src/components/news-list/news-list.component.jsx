@@ -22,8 +22,8 @@ const NewsList = ({url}) => {
     return(
         <div className='card-list'>
             {news ? 
-                news.articles.map(({ description , ...otherProps }) => (
-                <NewsCard key={description} {...otherProps} />
+                news.articles.map(({ url , ...otherProps }) => (
+                <NewsCard key={url} {...otherProps} />
                 )
             )
             : 

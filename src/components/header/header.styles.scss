@@ -17,7 +17,7 @@
     font-size: small;
     box-shadow: 0 0 1px;
 
-    &:target {
+    &.active {
       border: 2px solid #cfbd52;
     }
 
@@ -33,6 +33,6 @@
   }
 
   @media screen and (max-width: 590px) {
-    width: 100%;
+    width: 95%;
   }
 }

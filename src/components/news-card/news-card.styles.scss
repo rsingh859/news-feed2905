@@ -5,6 +5,11 @@
   grid-template-areas: "image" "text" "footer";
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+
+  &:hover {
+    grid-template-rows: 150px 80px 100px;
+  }
 
   .card-body {
     grid-area: text;
@@ -40,13 +45,13 @@
   .card-footer {
     grid-area: footer;
     background-color: whitesmoke;
-    transition: all 0.5s cubic-bezier(0.48, -0.28, 0.41, 1.4);
     overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    object-fit: contain;
 
     .author-date {
       display: flex;

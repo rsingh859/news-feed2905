@@ -8,6 +8,28 @@ import { useNewsContext } from '../../context/news/news.context.provider';
 
 import { setUrl } from '../../context/news/news.action.creators';
 
+const handleOnClick = ({link, dispatch}) => {
+
+    const options = document.querySelectorAll('.option');
+
+    options.forEach((option) => {
+        option.addEventListener('click', () => {
+            console.log("Calling the remove active class")
+            removeActiveClasses();
+            option.classList.add('active')
+            console.log(option.classList);
+        })
+    })
+
+    const removeActiveClasses = () => {
+        console.log("In remove active classes")
+        options.forEach(option => {
+            option.classList.remove('active')
+        })
+    }
+
+    dispatch(setUrl(link));
+}
 
 const Header = () => {
     const [{ url }, dispatch] = useNewsContext();
@@ -19,11 +41,11 @@ const Header = () => {
     return (    
     <div>
         <div className='header-container'>
-            <div className='option' onClick = {() => dispatch(setUrl(URL_TESLA))} >TESLA</div>
-            <div className='option' onClick = {() => dispatch(setUrl(URL_BUSINESS))}>BUSINESS</div>
-            <div className='option' onClick = {() => dispatch(setUrl(URL_APPLE))}>APPLE</div>
-            <div className='option' onClick = {() => dispatch(setUrl(URL_TECH))}>TECHCRUNCH</div>
-            <div className='option' onClick = {() => dispatch(setUrl(URL_WSJ))}>WALLSTREET JOURNALS</div>
+            <div className='option' onClick = {() => handleOnClick({link: URL_TESLA, dispatch})} >TESLA</div>
+            <div className='option' onClick = {() => handleOnClick({link: URL_BUSINESS, dispatch})}>BUSINESS</div>
+            <div className='option' onClick = {() => handleOnClick({link: URL_APPLE, dispatch})}>APPLE</div>
+            <div className='option' onClick = {() => handleOnClick({link: URL_TECH, dispatch})}>TECHCRUNCH</div>
+            <div className='option active' onClick = {() => handleOnClick({link: URL_WSJ, dispatch})}>WALLSTREET JOURNALS</div>
         </div>
         <NewsList url={url} />
     </div>
