@@ -6,10 +6,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 1s;
-
-  // &:hover {
-  //   grid-template-rows: 150px 80px 100px;
-  // }
+  box-sizing: border-box;
 
   .card-body {
     grid-area: text;
@@ -52,11 +49,11 @@
     justify-content: space-between;
     align-items: center;
     object-fit: contain;
-    transition: 0.2s ease-in;
+    transition: 0.2s cubic-bezier(0.48, -0.28, 0.41, 1.4);
 
     &:hover {
-      transform: translateY(-60px);
       height: 100px;
+      transform: translateY(-60px);
     }
 
     .author-date {
