@@ -7,9 +7,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 1s;
 
-  &:hover {
-    grid-template-rows: 150px 80px 100px;
-  }
+  // &:hover {
+  //   grid-template-rows: 150px 80px 100px;
+  // }
 
   .card-body {
     grid-area: text;
@@ -52,11 +52,18 @@
     justify-content: space-between;
     align-items: center;
     object-fit: contain;
+    transition: 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(-60px);
+      height: 100px;
+    }
 
     .author-date {
       display: flex;
       flex-direction: column;
       padding: 10px;
+      flex: 0.8;
 
       .author {
         font-weight: bold;
@@ -74,6 +81,7 @@
       display: flex-end;
       padding-right: 5px;
       font-size: 12px;
+      flex: 0.2;
     }
   }
 }

@@ -14,11 +14,11 @@ const handleOnClick = ({link, dispatch}) => {
 
     options.forEach((option) => {
         option.addEventListener('click', () => {
-            removeActiveClasses()
+            removeActiveClasses();
             option.classList.add('active')
         })
     })
-
+    
     const removeActiveClasses = () => {
         options.forEach(option => {
             option.classList.remove('active')
@@ -30,7 +30,7 @@ const handleOnClick = ({link, dispatch}) => {
 
 const Header = () => {
     const [{ url }, dispatch] = useNewsContext();
-    const URL_TESLA = 'http://newsapi.org/v2/everything?q=tesla&from=2021-01-08&sortBy=publishedAt&apiKey=';
+    const URL_TESLA = 'http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=';
     const URL_BUSINESS = 'http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=';
     const URL_APPLE = 'http://newsapi.org/v2/everything?q=apple&from=2021-02-07&to=2021-02-07&sortBy=popularity&apiKey=';
     const URL_TECH = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=';
