@@ -7,7 +7,6 @@ import NewsCard from '../news-card/news-card.component';
 import Spinner from '../spinner/spinner.component';
 
 const NewsList = ({url}) => {
-
     const [news, setNews ] = useState(null);
     const API_KEY = '7e3bcec9fc6240c09259254552a7affb';
     useEffect(() => {

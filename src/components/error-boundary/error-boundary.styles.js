@@ -20,5 +20,5 @@ export const ErrorImageContainer = styled.div`
 
 export const ErrorImageText = styled.h2`
     font-size: 28px;
-    color: #8E3521;
+    color: rgb(129, 129, 129);
 `;
